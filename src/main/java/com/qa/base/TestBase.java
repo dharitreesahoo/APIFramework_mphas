@@ -69,7 +69,7 @@ public class TestBase {
 		extent.flush();
 	}
 	
-	public void logExtentReport(String steps , String status){
+	public static void logExtentReport(String steps , String status){
 		if(status.toUpperCase().equals("PASS"))
 		{
 			childTest.log(Status.PASS, MarkupHelper.createLabel(steps, ExtentColor.BLUE));
@@ -78,7 +78,7 @@ public class TestBase {
 		}
 		
 	}
-	public void logExtentReportValidationHighlight(String steps , String status){
+	public static void logExtentReportValidationHighlight(String steps , String status){
 		if(status.toUpperCase().equals("PASS"))
 		{
 			childTest.log(Status.PASS, MarkupHelper.createLabel(steps, ExtentColor.GREEN));
